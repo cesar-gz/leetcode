@@ -1,0 +1,13 @@
+Algorithm 1 Mathematical Analysis and correct Big O efficiency class
+
+Big O(n cubed)
+
+where n is the size of the distance array
+
+Outer for-loop = n (we traverse every element)
+Nested while-loop = n (we traverse every element, in place popping and appending the array)
+Inner most for-loop = n (we traverse the size of distances array performing addition and subtraction)
+
+n*n*n = n cubed worst case
+
+Algorithm 2 Mathematical Analysis and correct Big O efficiency class

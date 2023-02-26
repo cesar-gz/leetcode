@@ -1,0 +1,27 @@
+Algorithm 1 Pseudocode: Greedy Approach to Hamilton Problem
+
+    set variable X to 0
+    set variable Y to size of distances array
+
+    for every city in Y do
+      if at first city
+        continue
+      else
+        set variable J to 0
+        while j is less than city
+          add first element of distance array to the end
+          increment j by 1
+
+      for every element in distance array
+        if at first element
+          Add to X the fuel, at same index as distance, and multiply it by mpg
+          continue
+        else
+          subtract from X the next city's distance
+          then add to X, the next fuel multiplied by mpg
+
+      if X is greater than or equal to 0
+        return X
+      else
+        set X to 0
+        resume outer for loop
