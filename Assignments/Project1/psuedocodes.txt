@@ -1,4 +1,4 @@
-Algorithm 1 Pseudocode: Greedy Approach to Hamilton Problem
+-------------------- Algorithm 1 Pseudocode: Greedy Approach to Hamilton Problem -------------------
 
     set variable X to 0
     set variable Y to size of distances array
@@ -25,3 +25,18 @@ Algorithm 1 Pseudocode: Greedy Approach to Hamilton Problem
       else
         set X to 0
         resume outer for loop
+
+-------------------------- Algorithm 2 Pseudocode:  Matching Group Schedules ------------------------
+
+    remove semicolons from input arrays
+    convert string arrays into integer arrays for comparisons
+    add one of the daily activities array into the other
+    sort the combined integer daily activity array in ascending order
+    find the beginning and end time window that both members are available in the entire day
+    remove times that either member could not meet in the daily activities array
+    create the output array
+    append to the output array only the times of the daily activities that meet the duration_of_meeting
+    add to the beginning of the output array any free time both could meet that follows the d_of_m & time window schedule
+    add to the end of the output array any free time both could meet that follows the d_of_m & time window schedule
+    format the output array back to string, and add the semicolon in the correct index
+    return output array

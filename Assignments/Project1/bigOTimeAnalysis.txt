@@ -1,13 +1,29 @@
-Algorithm 1 Mathematical Analysis and correct Big O efficiency class
+---------------  Algorithm 1 Mathematical Analysis and correct Big O efficiency class -------------
 
-Big O(n cubed)
+Efficiency class: Big O(n cubed)
 
-where n is the size of the distance array
+  where n is the size of the distance array
 
-Outer for-loop = n (we traverse every element)
-Nested while-loop = n (we traverse every element, in place popping and appending the array)
-Inner most for-loop = n (we traverse the size of distances array performing addition and subtraction)
+  Outer for-loop = n (we traverse every element)
+  Nested while-loop = n (we traverse every element, in place popping and appending the array)
+  Inner most for-loop = n (we traverse the size of distances array performing addition and subtraction)
 
-n*n*n = n cubed worst case
+  n*n*n = n cubed worst case
 
-Algorithm 2 Mathematical Analysis and correct Big O efficiency class
+Method used: efficiency classes domination
+
+--------------   Algorithm 2 Mathematical Analysis and correct Big O efficiency class -------------
+
+Efficiency class: Big O(n squared)
+
+  converting the input arrays from strings to integers without semicolon each took n squared time at worst
+
+  sorting one array took n log n time
+
+  iterating through array took n time
+
+  reformating the output array from integer to string and took n squared time
+
+  comparing n squared time vs n log n time vs n time, n squared time is the worst one
+
+Method used: efficiency classes domination
