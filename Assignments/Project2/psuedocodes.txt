@@ -1,0 +1,23 @@
+-------------------- Algorithm 1 Pseudocode: Target Terms or Substrings -------------------
+
+create output array
+create temporary empty string
+get the length of the concatenated string
+create a index variable of type integer and intialize it to 0
+
+while index < length:
+    for every character in the concatenated string
+        temp = temp + character
+        if temp is a word in the targeted cities array
+            add the index to the output array
+            break out of the for loop to save time
+    set temp variable back to empty string
+    edit the concatenated string by taking away only the first char of the string
+    increment index by 1
+
+return the output array
+
+-------------------- Algorithm 2 Pseudocode: Run Encoding Problem -------------------
+
+
+-------------------- Algorithm 3 Pseudocode: Merging Techniques -------------------

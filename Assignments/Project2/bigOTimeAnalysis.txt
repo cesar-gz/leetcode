@@ -1,0 +1,15 @@
+---------------  Algorithm 1 Mathematical Analysis and correct Big O efficiency class -------------
+
+Efficiency class:
+Method used:
+
+
+---------------  Algorithm 2 Mathematical Analysis and correct Big O efficiency class -------------
+
+Efficiency class:
+Method used:
+
+---------------  Algorithm 3 Mathematical Analysis and correct Big O efficiency class -------------
+
+Efficiency class:
+Method used:
