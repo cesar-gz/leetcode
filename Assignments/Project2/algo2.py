@@ -10,13 +10,18 @@ def stringRunEncoder(string) -> str:
     lowercase or a spaces. Output: a string with runs
     """
     newString = ""
-    copy = string
+    i = 0
 
-    for i in range( len(string) -1 ):
+    while len(string) > 0 :
         counter = 1
-        if string[i] == string[i+1] and i < len(string):
+        while i < len(string) - 1 and string[i] == string[i+1]:
             counter += 1
-        newString += str(counter) + copy[i]
+            i += 1
+        newString += str(counter) + string[0]
+        if counter > 1:
+            string = string[counter:]
+        elif counter == 1:
+            string = string[1:]
 
     newString = newString.replace("1", "")
 
