@@ -9,6 +9,7 @@ def stringRunEncoder(string) -> str:
     many times it appears. "aaaa" is replaced with "4a". Input: A string of n characters that are
     lowercase or a spaces. Output: a string with runs
     """
+    
     newString = ""
     i = 0
 
@@ -20,13 +21,13 @@ def stringRunEncoder(string) -> str:
         newString += str(counter) + string[0]
         if counter > 1:
             string = string[counter:]
+            i -= 1
         elif counter == 1:
             string = string[1:]
 
     newString = newString.replace("1", "")
 
     return newString
-
 
 """
 Test Cases
