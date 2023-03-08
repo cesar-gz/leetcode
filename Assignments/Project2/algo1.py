@@ -12,28 +12,44 @@ def targetTermsOrSubstrings( cities:list[str], target:list[str] ) -> list[int]:
     with open("in2a.txt", "r", encoding="utf8") as file:
         next(file)                                  # skip the first two lines
         next(file)                                  
+        x = 1
         for line in file:
-            line = line[13:-3]                      # get rid of "array 1a" and "\n"
+            if x%2 != 0:
+                line = line[13:-3]                      # get rid of "array 1a" and "\n"
+            elif x%2 == 0:
+                line = line[12:-2]
             listOfArrays.append(line)
+            x += 1
     
-    listOfCities = []
-    listOfTargets = []
-
     i = 2                                           # start removing the empty elements
     while i < len(listOfArrays):
         listOfArrays.pop(i)
         listOfArrays.pop(i)
         i += 2
 
+    listOfCities = []
+    listOfTargets = []
+    x = 1
+
     for elem in listOfArrays:
         elem = list(elem)
         j = 1
         while j < len(elem):
-            elem[0] += elem.pop(j) 
-        print(elem)
+            elem[0] += elem.pop(j)
+        if x%2 != 0:
+            listOfCities.append(elem)
+        elif x%2 == 0:
+            listOfTargets.append(elem)
+        x += 1
 
-    print(cities)
-    print(target)
+    listOfArrays = listOfTargets
+    j = 0
+    for elem in listOfArrays:
+        for item in elem:
+            if j == len(listOfArrays)-1:
+                item += "'"
+            print(item)
+        j += 1
 
     output_order = []                               # what will we turn in
     output_array = []
@@ -52,6 +68,7 @@ def targetTermsOrSubstrings( cities:list[str], target:list[str] ) -> list[int]:
         cities[0] = (cities[0])[1:]                 # slice the first character of the concatenated long word
         index += 1                                  # increment index to keep track the position of the long word, is also the exit condition
         
+    print("", end="\n")
     print(output_array)
     return output_order
 
