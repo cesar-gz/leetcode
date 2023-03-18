@@ -11,7 +11,7 @@ def targetTermsOrSubstrings( cities:list[str], target:list[str] ) -> list[int]:
     listOfArrays = []
     with open("in2a.txt", "r", encoding="utf8") as file:
         next(file)                                  # skip the first two lines
-        next(file)                                  
+        next(file)
         x = 1
         for line in file:
             if x%2 != 0:
@@ -20,7 +20,7 @@ def targetTermsOrSubstrings( cities:list[str], target:list[str] ) -> list[int]:
                 line = line[12:-2]
             listOfArrays.append(line)
             x += 1
-    
+
     i = 2                                           # start removing the empty elements
     while i < len(listOfArrays):
         listOfArrays.pop(i)
@@ -43,13 +43,19 @@ def targetTermsOrSubstrings( cities:list[str], target:list[str] ) -> list[int]:
         x += 1
 
     listOfArrays = listOfTargets
+    listOfTargets = []
     j = 0
     for elem in listOfArrays:
+        temp = []
         for item in elem:
+            item = item.replace('"', "")
             if j == len(listOfArrays)-1:
                 item += "'"
-            print(item)
+            temp.append(item)
         j += 1
+        listOfTargets.append(temp)
+
+    print(listOfTargets)
 
     output_order = []                               # what will we turn in
     output_array = []
@@ -67,7 +73,7 @@ def targetTermsOrSubstrings( cities:list[str], target:list[str] ) -> list[int]:
         word=""                                     # reset the temp word back to empty
         cities[0] = (cities[0])[1:]                 # slice the first character of the concatenated long word
         index += 1                                  # increment index to keep track the position of the long word, is also the exit condition
-        
+
     print("", end="\n")
     print(output_array)
     return output_order
@@ -79,7 +85,7 @@ Test Case
 A = ["thismetoaklandrialtofullertonmarcolongchinofresnovallejoclovissimithound"]
 B = [ 'marco', 'clovis', 'rialto', 'oakland']
 
-# Output: 
+# Output:
 # Output_order = [ 7, 14, 29, 56]
 # Output_array =[ 'oakland', 'riato', 'marco', 'clovis']
 print(targetTermsOrSubstrings(A,B))
