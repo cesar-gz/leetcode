@@ -42,3 +42,20 @@ remove all the 1s in the output string
 return the output string
 
 -------------------- Algorithm 3 Pseudocode: Merging Techniques -------------------
+
+create the output array
+create two sub strings that we be checked to see if we are at the end of an input array
+
+parse through the input file
+    for every input array
+        create a temp array to work with
+        for every line in the file
+            remove text that isn't required for sorting
+            save text that would be sorted in temp array
+        add temp array to output array
+
+convert every string array in output array to an integer array
+
+sort each array in the output array by ascendering order where negatives are first elements
+
+return output array

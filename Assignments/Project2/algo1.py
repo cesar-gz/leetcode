@@ -94,4 +94,5 @@ def targetTermsOrSubstrings():
 """
 Test Case
 """
+# input is a file that is in the same directory as this py file
 array = targetTermsOrSubstrings()

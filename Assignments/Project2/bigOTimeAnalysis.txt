@@ -18,5 +18,12 @@ Method used: efficieny classes domination
 
 ---------------  Algorithm 3 Mathematical Analysis and correct Big O efficiency class -------------
 
-Efficiency class:
+Efficiency class: big O(n squared)
+
+- parsing the text file line by line took big O(n) time, where n is the length of the file
+- comparing each line took big O(n) time where n is the length of the line
+- converting a string list to a int list took big O(n squared) time, where I sifted through
+  every element of every array
+- sorting each array took big O(n squared) time because I implemented a bubble sort
+
 Method used: efficieny classes domination
