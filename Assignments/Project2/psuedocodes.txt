@@ -1,5 +1,6 @@
 -------------------- Algorithm 1 Pseudocode: Target Terms or Substrings -------------------
 
+parse text file to get the input cities and targets arrays
 create output order array
 create output word array
 create temporary empty string

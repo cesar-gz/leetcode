@@ -1,15 +1,18 @@
 ---------------  Algorithm 1 Mathematical Analysis and correct Big O efficiency class -------------
 
-Efficiency class:
-Method used:
+Efficiency class: big O( n squared )
 
+- parsing the text file took n squared time
+- traversing and finding the correct index locations in ascending order took n squared time
+
+Method used: efficieny classes domination
 
 ---------------  Algorithm 2 Mathematical Analysis and correct Big O efficiency class -------------
 
 Efficiency class:
-Method used:
+Method used: efficieny classes domination
 
 ---------------  Algorithm 3 Mathematical Analysis and correct Big O efficiency class -------------
 
 Efficiency class:
-Method used:
+Method used: efficieny classes domination
