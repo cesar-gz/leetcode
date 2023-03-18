@@ -61,6 +61,8 @@ def targetTermsOrSubstrings():
         listOfTargets[p] = list( elem[0].replace("'","").split(", ") )
         p += 1
                                                         # finished parsing the text file
+    
+    finalArray = []
     for i in range(len(listOfCities)):
         cities = listOfCities[i]                        # grab the current cities array
         target = listOfTargets[i]                       # grab the corresponding targets array
@@ -85,8 +87,11 @@ def targetTermsOrSubstrings():
         print("")
         print(output_order)
         print(output_array)
+        finalArray.append(output_order)
+
+    return finalArray
 
 """
 Test Case
 """
-targetTermsOrSubstrings()
+array = targetTermsOrSubstrings()

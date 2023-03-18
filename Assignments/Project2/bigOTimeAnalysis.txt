@@ -9,7 +9,11 @@ Method used: efficieny classes domination
 
 ---------------  Algorithm 2 Mathematical Analysis and correct Big O efficiency class -------------
 
-Efficiency class:
+Efficiency class: big O(n)
+
+- traversing the input string and comparing character took the n long
+  where n is the length of the input string
+
 Method used: efficieny classes domination
 
 ---------------  Algorithm 3 Mathematical Analysis and correct Big O efficiency class -------------
