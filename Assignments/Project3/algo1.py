@@ -1,6 +1,7 @@
 """
 Submission for Cesar Gutierrez
 """
+import time
 
 def soccer_exhaustive(matrixG):
     """
@@ -9,6 +10,8 @@ def soccer_exhaustive(matrixG):
     a row or right a column. The player can not pass through enemy players. Solve using a exhaustive
     approach.
     """
+    start_time = time.time()
+
     r = len(matrixG)        # number of rows in matrix
     c = len(matrixG[0])     # number of cols in matrix
 
@@ -26,6 +29,10 @@ def soccer_exhaustive(matrixG):
             candidate.append( (i+1, j) )
       if isValid(candidate, matrixG, r, c):
         counter += 1
+
+    # to get a measure of time
+    print("--- %s seconds ---" % (time.time() - start_time))
+
     return counter
 
 def isValid(path, grid, row, col):
@@ -46,6 +53,9 @@ def isValid(path, grid, row, col):
 
 def soccer_dyn_prog(matrixF):
   """ same as the problem above, but solve using a dynamic programming approach"""
+
+  start_time = time.time()
+
   if matrixF[0][0] == "X":
      # corner case where the first starting cell is un passable
      return 0
@@ -70,6 +80,10 @@ def soccer_dyn_prog(matrixF):
         if j > 0 and matrixF[i][j-1] == "." :
            left = newMatrix[i][j-1]
         newMatrix[i][j] += above + left
+
+  # to get a measure of time
+  print("--- %s seconds ---" % (time.time() - start_time))
+
   return newMatrix[r-1][c-1]
 
 
