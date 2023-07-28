@@ -48,3 +48,23 @@ class Solution:
                islands += 1
 
       return islands
+
+    def numIslands2(self, grid: List[List[str]]) -> int:
+       # keep track of row and column lengths of grid to access later
+       m, n = len(grid), len(grid[0])
+
+       def destroyIsland(r,c):
+          # use DFS recursively
+          grid[r][c] = "2" # initialize this to 2 to avoid infinite loops
+          for (row,col) in [ (r-1,c), (r+1,c), (r,c-1), (r,c+1)]:
+             # traverse 4 directions
+             if 0 <= row < m and 0 <= col < n and grid[row][col] == "1":
+                destroyIsland(row,col)
+       islands = 0
+       for i, row in enumerate(grid):
+          for j, element in enumerate(row):
+             if element == "1":
+                destroyIsland(i,j)
+                islands += 1
+
+       return islands
